@@ -1,7 +1,7 @@
 {
-  "name": "fluent-assertions-typescript",
+  "name": "flasst",
   "version": "0.0.1",
-  "description": "This is a library to create fluent assertions in typescript. This can be used with a variety of testing frameworks such as (but not limited to) karma, jest, protractor, cypress.",
+  "description": "This is a library to create fluent assertions in frontend tests. This can be used with a variety of wellknown testing frameworks such as karma, jest, protractor, cypress but can be used anywhere.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepare" : "npm run build",
     "prepublishOnly" : "npm test",
-    "version" : "npm run format && git add -A src",
+    "version" : "npm run format && git add -A",
     "postversion" : "git push && git push --tags"
 
   },

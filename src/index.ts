@@ -24,6 +24,12 @@ class FluentAssertion {
         }
     }
 
+    public isNotEqualTo(expected: any): void {
+        if (this.objectUnderTest === expect) {
+            throw new Error(`Expected objects ${this.objectUnderTest} and ${expected} not to match but both were equal`);
+        }
+    }
+
     public equalTo(expected: any): void {
         this.equals(expected);
     }
