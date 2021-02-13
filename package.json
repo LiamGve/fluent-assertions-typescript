@@ -1,0 +1,41 @@
+{
+  "name": "fluent-assertions-typescript",
+  "version": "0.0.1",
+  "description": "This is a library to create fluent assertions in typescript. This can be used with a variety of testing frameworks such as (but not limited to) karma, jest, protractor, cypress.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config ./jest.config.js",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiamGve/fluent-assertions-typescript.git"
+  },
+  "keywords": ["typescript", "test", "assertions", "frontend"],
+  "author": "@LiamGarvie <https://twitter.com/LiamGarvie>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LiamGve/fluent-assertions-typescript/issues"
+  },
+  "homepage": "https://github.com/LiamGve/fluent-assertions-typescript#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.4",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
