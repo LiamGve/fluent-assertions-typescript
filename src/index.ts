@@ -50,6 +50,27 @@ class FluentAssertion {
         this.equals(false);
     }
 
+    public isIn(arr: any[]): void {
+        if (arr.indexOf(this.objectUnderTest) === -1) {
+            throw new Error(`${this.objectUnderTest} is not in ${arr}`);
+        }
+    }
+
+    public isNotIn(arr: any[]): void {
+        if (arr.indexOf(this.objectUnderTest) > -1) {
+            throw new Error(`${this.objectUnderTest} is in ${arr}`);
+        }
+    }
+
+    public containsElement(element: any): void {
+        if (!Array.isArray(this.objectUnderTest)) {
+            throw new Error(`${this.objectUnderTest} is not of type Array`);
+        }
+        if (this.objectUnderTest.indexOf(element) === -1) {
+            throw new Error(`${element} is not in ${this.objectUnderTest}`);
+        }
+    }
+
     public contains(expected: string | number): void {
         if (typeof this.objectUnderTest !== 'string' || typeof expected === 'number') {
             this.objectUnderTest = '' + this.objectUnderTest;

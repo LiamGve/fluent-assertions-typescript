@@ -47,6 +47,18 @@ test('...', () => {
     assertThat(foo)
       .hasField(bar)
       .isNotEqualTo(baz);
+
+    // support for array checks
+    const foo = [1, 2, 3];
+    assertThat(foo)
+      .containsElement(1);
+
+    const bar = 3
+    assertThat(bar)
+      .isIn([1, 2, 3]);
+
+    assertThat(bar)
+      .isNotIn([1, 2, 4]);
 });
 ```
 
