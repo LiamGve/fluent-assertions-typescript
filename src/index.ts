@@ -8,6 +8,15 @@ export const assertThat = (thing: any): FluentAssertion => {
     return new FluentAssertion(thing);
 }
 
+export const assertThatThrownBy = (fun: () => any): FluentAssertion => {
+    try {
+        fun();
+    } catch (error) {
+        return new FluentAssertion(error);
+    }
+    throw new Error('No exceptions were thrown');
+}
+
 class FluentAssertion {
     constructor(private objectUnderTest: any) {}
 
@@ -125,6 +134,6 @@ export const fail = (message?: string): void => {
     if (message) {
         throw new Error(message);
     } else {
-        throw Error();
+        throw new Error();
     }
 }
