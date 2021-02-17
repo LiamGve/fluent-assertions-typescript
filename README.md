@@ -92,7 +92,10 @@ test('...', () => {
 test('...', () => {
     assertThat(foo)
       .isNotEqualTo(bar);
-
+  
+    assertThat(foo)
+      .isNot(bar);
+  
     assertThat(foo)
       .hasField(bar)
       .isNotEqualTo(baz);

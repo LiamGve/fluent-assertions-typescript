@@ -39,6 +39,10 @@ class FluentAssertion {
         }
     }
 
+    public isNot(expected: any): void {
+        this.isNotEqualTo(expected);
+    }
+
     public equalTo(expected: any): void {
         this.equals(expected);
     }

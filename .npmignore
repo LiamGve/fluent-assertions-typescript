@@ -1,3 +1,6 @@
-__TESTS__
 src
 node_modules
+coverage
+jest.config.js
+tsconfig.json
+deploy.sh

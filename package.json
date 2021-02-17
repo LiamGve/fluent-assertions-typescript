@@ -1,6 +1,6 @@
 {
   "name": "flasst",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "This is a library to create fluent assertions in frontend tests. This can be used with a variety of wellknown testing frameworks such as karma, jest, protractor, cypress but can be used anywhere.",
   "main": "dist/index.js",
   "scripts": {
