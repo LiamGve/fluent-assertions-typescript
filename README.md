@@ -1,5 +1,9 @@
 # fluent-assertions (flasst)
-This is a lightweight library with no dependencies to create fluent assertions in Jest/Karma/Cypress/Protractor (though can be used by any test framework as it has no dependencies). This can also be used with javascript applications.
+This is a lightweight library with no dependencies for to create fluent assertions in Jest/Karma/Cypress/Protractor (though can be used by any test framework as it has no dependencies). This can also be used with javascript applications.
+
+```
+npm i flasst --save-dev
+```
 
 If you like the library, send me a tweet [@LiamGarvie](https://twitter.com/LiamGarvie) to let me know you're using it or to suggest improvements!
 
